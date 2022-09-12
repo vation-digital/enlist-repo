@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dizitalpods - Details Edit Page</title>
+    <link rel="icon" type="image/x-icon" href="../images/tab.png">
+    <title>Enlist - Calendar</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -23,6 +24,16 @@
     <link href="/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../css/styles.css" rel="stylesheet">
+
+
+   
+    
+    <!-- include the jQuery UI style sheet -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- include jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
 
@@ -44,7 +55,7 @@
 
             <!-- Nav Items -->
             <li class="nav-item active">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/overview.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Overview</span></a>
             </li>
@@ -76,7 +87,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="../index.html">
                     <i class="fas fa-mail-bulk"></i>
-                    <span>Job Posting</span></a>
+                    <span>Job Indent</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./candidates.html">
@@ -86,7 +97,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="./Referralpage.html">
                     <i class="fas fa-external-link-alt"></i>
-                    <span>Referrels</span></a>
+                    <span>Referrals</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -99,19 +110,19 @@
             <!-- Nav Item -->
             <!-- Nav Item -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/employee.html">
                     <i class="fas fa-users"></i>
                     <span>Employee</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/Rolepage.html">
                     <i class="fas fa-project-diagram"></i>
-                    <span>Projects</span></a>
+                    <span>Roles</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/client.html">
                     <i class="far fa-clock"></i>
-                    <span>Timesheet</span></a>
+                    <span>Clients</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -227,7 +238,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Suresh R</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">User Name</span>
                                 <img class="img-profile rounded-circle" src="../images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -261,20 +272,73 @@
                             <div class="row mx-1">
                                 <div class="col-sm-6">
                                     <div class="card">
-                                        <div class="card-body">
+                                        <div class="card-body p-0">
                                             <div class="row">
-                                                <div class="col-4">
-                                                    <h2>CALENDAR</h2>
+                                                <div class="col-3 calendar-rotate">
+                                                    <h1>CALENDAR</h1>
                                                 </div>
-                                                <div class="col-8"></div>
+                                                <div class="col-9 py-3 d-grid justify-content-center">
+
+                                                    <!-- <div class="container size">
+                                                        <div class="calendar">
+                                                            <div class="month">
+                                                                <i class="fas fa-angle-left prev"></i>
+                                                                <div class="date">
+                                                                    <h1></h1>
+                                                                    <p></p>
+                                                                </div>
+                                                                <i class="fas fa-angle-right next"></i>
+                                                            </div>
+                                                            <div class="weekdays">
+                                                                <div>Sun</div>
+                                                                <div>Mon</div>
+                                                                <div>Tue</div>
+                                                                <div>Wed</div>
+                                                                <div>Thu</div>
+                                                                <div>Fri</div>
+                                                                <div>Sat</div>
+                                                            </div>
+                                                            <div class="days"></div>
+                                                        </div>
+                                                    </div> -->
+                                                    <!-- <input type="date"> -->
+                                                    <div id="datepicker1" class="align-items-center"></div>
+                                                    <div class="text-center mr-3 mt-3" >
+                                                        <button class="btn btn-primary w-50" onclick="clickok()">OK</button>
+                                                    </div>
+
+                                                  <script type="text/javascript">
+                                                      $(function() {
+                                                            $("#datepicker1").datepicker(); 
+                                                     });
+                                                  </script>
+                                                    <script language="javascript" type="text/javascript">
+                                                      function clickok() {
+                                                            const dateData = document.getElementById('datepicker1');
+                                                            const dateDetails = dateData.getElementsByClassName('active day')[0];
+                                                            const time = dateDetails.getAttribute('data-date');
+                                                            let take = new Date(Number(time));
+                                                            document.getElementById('takenvalue').innerHTML = take.toString().slice(0,15);
+                                                            document.getElementById('takenvalue1').value = take.toString().slice(0,15);
+                                                            // document.getElementById('takenvalue') = new Date();
+                                                        }
+                                                        </script>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="card">
-                                        <div class="card-body px-5 py-4">
-                                            <h5>Schedule an Interview</h5>
+                                        <div class="card-body px-4 py-3">
+                                            <div class="row d-flex align-items-center">                                 
+                                                <div class="col-md-6 mb-3">
+                                                    <h5>Schedule an Interview</h5>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                 <input class="m-0 form-control calendar_takenvalue1 w-75 border-0" id="takenvalue1" value="" disabled />
+                                                </div>
+                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 mb-3">
                                                     <label for="calendar-task" class="text-dark fw-bold">Task</label>
@@ -282,27 +346,31 @@
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <label for="calendar-time" class="text-dark fw-bold">Time</label>
-                                                    <div class="d-flex center align-content-center justify-content-center">
-                                                        <input type="text" class="form-control text-center bg-gray-200 border-0" id="jobtype" value="12" required="">
+                                                    <div class="d-flex center align-content-center justify-content-start">
+                                                        <!-- <input type="text" class="form-control text-center bg-gray-200 border-0" id="jobtype" value="12">
                                                         <spam class="mx-lg-2 d-flex align-items-center">:</spam>
-                                                        <input type="text" class="form-control mr-1 text-center bg-gray-200 border-0" id="jobtype" value="20" required="">
-                                                        <input type="text" class="form-control ml-1 text-center bg-gray-200 border-0" id="jobtype" value="pm" required="">
+                                                        <input type="text" class="form-control mr-1 text-center bg-gray-200 border-0" id="jobtype" value="20">
+                                                        <input type="text" class="form-control ml-1 text-center bg-gray-200 border-0" id="jobtype" value="pm"> -->
+                                                        <input type="time" class="form-control bg-gray-200 border-0 w-75" id="" name="">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 mb-3">
-                                                    <label for="calendar-category" class="text-dark fw-bold">Category</label>
+                                                     <label for="calendar-category" class="text-dark fw-bold">Category</label>
                                                     <select class="form-select w-75 bg-gray-200 border-0" aria-label="Default select example">
                                                         <option selected>Choose</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
                                                         <option value="3">Three</option>
                                                    </select>
+                                                   <!-- <label for="calendar-date" class="text-dark fw-bold">Date</label>
+                                                   <input type="date" class="form-control bg-gray-200 border-0 w-75" id="" name=""> -->
+
                                                 </div>
                                                 <div class="col-md-6 mb-3">
                                                     <label for="calendar-assignto" class="text-dark fw-bold">Assign To</label>
-                                                    <input type="text" class="form-control w-75 bg-gray-200 border-0" id="calendar-assignto" value="HR" required="">
+                                                    <input type="text" class="form-control w-75 bg-gray-200 border-0" id="calendar-assignto" placeholder="HR" value="" required="">
                                                 </div>
                                             </div>
                                             <div class="my-2">
@@ -318,8 +386,8 @@
                                         <div class="card-body px-4 py-4">
                                             <div class="calendar-schedules">
                                                 <div class="my-2">
-                                                    <h5 class="m-0">12, March</h5>
-                                                    <a href="">Friday</a>
+                                                    <h5 class="m-0" id="takenvalue"></h5>
+                                                    <!-- <a href="">Friday</a> -->
                                                 </div>
                                                 <div class="meet d-flex align-items-center px-4 py-2 my-3">
                                                     <span class="w-50">Dizitalpods Meeting</span>
@@ -338,6 +406,7 @@
                                                 <div class="meet d-flex align-items-center px-4 py-2 my-3">
                                                     <span class="w-50">Adobe project Discussion</span>
                                                     <span>Work</span>
+
                                                     <span class="ml-4">12:56 pm</span>
                                                     <span class="ml-4"><a href="" class="text-gray-500"><i class="fa-solid fa-pen"></i> </a></span>
                                                     <span class="ml-4"><a href="" class="text-gray-500"><i class="fa-solid fa-trash-can"></i></a></span>
@@ -391,13 +460,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white ">
+            <!-- <footer class="sticky-footer bg-white ">
                 <div class="container my-auto ">
                     <div class="copyright text-center my-auto ">
                         <span>Copyright &copy; Dizitalpods 2022</span>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
             <!-- End of Footer -->
 
         </div>
@@ -432,7 +501,7 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="../js/jquery.js "></script>
-    <script src="../js/bootstrap.bundle.js "></script>
+    <script src="../js/bootstrap.bundle.js "></script> 
 
     <!-- Core plugin JavaScript-->
     <script src="../js/jquery.easing.js "></script>
@@ -440,6 +509,7 @@
                                                 " referrerpolicy="no-referrer "></script>
     <!-- Custom scripts for all pages-->
     <script src="../js/custom.js "></script>
+    <!-- <script src="../js/calendar.js"></script> -->
 
 </body>
 

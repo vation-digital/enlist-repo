@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dizitalpods - Job Posting Page</title>
+    <link rel="icon" type="image/x-icon" href="../images/tab.png">
+    <title>Enlist - CandidateProfile</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -45,7 +46,7 @@
 
             <!-- Nav Items -->
             <li class="nav-item active">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/overview.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Overview</span></a>
             </li>
@@ -76,7 +77,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="../index.html">
                     <i class="fas fa-mail-bulk"></i>
-                    <span>Job Posting</span></a>
+                    <span>Job Indent</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./candidates.html">
@@ -86,7 +87,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="./Referralpage.html">
                     <i class="fas fa-external-link-alt"></i>
-                    <span>Referrels</span></a>
+                    <span>Referrals</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -99,19 +100,19 @@
             <!-- Nav Item -->
             <!-- Nav Item -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/employee.html">
                     <i class="fas fa-users"></i>
                     <span>Employee</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/Rolepage.html">
                     <i class="fas fa-project-diagram"></i>
-                    <span>Projects</span></a>
+                    <span>Roles</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../pages/client.html">
                     <i class="far fa-clock"></i>
-                    <span>Timesheet</span></a>
+                    <span>Clients</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -227,7 +228,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Suresh R</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">User Name</span>
                                 <img class="img-profile rounded-circle" src="../images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -260,13 +261,51 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="container">
-                                <div class="row">
+                                <div class="row" style="position: relative;">
+                                    <div id="backdrop" style="width: 100%; height: 100%; background-color: black; opacity: 0.7; position: absolute;"></div>
                                     <div class="col-md-12 border rounded-1 bg-body">
                                         <div class="image-section text-center mx-3 my-3">
-                                            <a href="#" class="candidate_profile_edit-profile"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="../pages/candidatentry.html" class="candidate_profile_edit-profile"><i class="fa-solid fa-pen"></i></a>
                                             <a href="#" class="remove-profile"><i class="fa-solid fa-trash-can"></i></a>
-                                            <img src="../images/test_image.jpg" alt="Profile" class="rounded-circle border" width="120px" height="120px">
+                                            <img src="../images/test_image.jpg" alt="Profile" class="rounded-circle border" width="90px" height="90px">
                                             <h3 class="candidate_profile_name">Rohan Sharma</h3>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-2 ">
+                                            <div class="candidate_profile_toggleswitch">
+                                                <label class="switch m-0">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                            <div class=" mx-2">
+                                                <!-- <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2 fw-bold border-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Java Developer
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">AEM DEVELOPER</a>
+                                                    <a class="dropdown-item" href="#">Full STACK</a>
+                                                </div> -->
+                                                <select name="" id="" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0 fw-bold shadow">
+                                                    <option value="1">Java Developer</option>
+                                                    <option value="2">AEM Developer</option>
+                                                    <option value="3">Full Stack</option>
+                                                </select>
+                                            </div>
+                                            <div class="">
+                                                <!-- <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2 fw-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Client
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">ABC</a>
+                                                    <a class="dropdown-item" href="#">DFGH</a>
+                                                </div> -->
+                                                <select name="" id="" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0 fw-bold shadow">
+                                                    <option value="1">Client</option>
+                                                    <option value="2">First</option>
+                                                    <option value="3">Second</option>
+                                                    <option value="4">Third</option>
+                                                  </select>
+                                            </div>
                                         </div>
                                         <div class="row candidate_profile bg-gray-900">
                                             <div class="col-lg-6 text-bg-primary text-center border-right">
@@ -291,14 +330,16 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 text-bg-primary text-center">
-                                                <div class="d-flex">
-                                                    <div class="my-4 d-flex align-items-center justify-content-end candidate_profile_status">STATUS</div>
-                                                    <div class="my-4 d-flex align-items-center justify-content-end candidate_profile_toggle">
-                                                        <label class="switch">
+                                            <div class="col-lg-6 text-bg-primary text-center" id="hr-interview-block">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="my-4 d-flex align-items-center justify-content-end candidate_profile_status">INTERVIEW STATUS</div>
+                                                    <div class="my-4 d-flex align-items-center justify-content-end candidate_profile_status_edit">
+                                                        <!-- <label class="switch">
                                                             <input type="checkbox">
                                                             <span class="slider round"></span>
-                                                          </label>
+                                                          </label> -->
+                                                        <a id="candidate_profile_edit" class="candidate_profile_edit"><i class="fa-solid fa-pen text-body"></i></a>
+                                                        <a id="candidate_profile_check" class="candidate_profile_check"><i class="fa-solid fa-check text-body"></i></a>
                                                     </div>
 
                                                 </div>
@@ -342,13 +383,13 @@
                                                     </div>
                                                 </div> -->
 
-                                                <div class="hr-interview">
+                                                <div class="hr-interview" id="feedback">
                                                     <div class="row align-items-center m-0">
-                                                        <div class="col-6 p-0 fw-bold text-light fs-6">
+                                                        <div class="col-6 p-0 fw-bold fs-6">
                                                             1st Round
                                                         </div>
                                                         <div class="col-6 border-left-custom1">
-                                                            <div class="dropdown hr-interview-button">
+                                                            <!-- <div class="dropdown hr-interview-button">
                                                                 <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                   Cleared
                                                                 </button>
@@ -357,16 +398,24 @@
                                                                     <a class="dropdown-item" href="#">Null</a>
                                                                     <a class="dropdown-item" href="#">Not Attened</a>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
+                                                            <select name="hr-interview-status" style="display: none;" id="hr-interview-status" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0">
+                                                                <option value="Cleared">Cleared</option>
+                                                                <option value="Not Cleared">Not Cleared </option>
+                                                                <option value="Null">Null</option>
+                                                                <option value="Not Attened">Not Attened</option>
+                                                              </select>
+                                                            <div id="hr-interview-status-text" class="px-1 py-2 fw-bold">Test</div>
+
                                                         </div>
                                                     </div>
                                                     <div class="row align-items-center border-top-custom1 m-0">
-                                                        <div class="col-6 p-0 fw-bold text-light fs-6">
+                                                        <div class="col-6 p-0 fw-bold fs-6">
                                                             2nd Round
                                                         </div>
                                                         <div class="col-6 border-left-custom1">
-                                                            <div class="dropdown hr-interview-button">
-                                                                <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <!-- <div class="dropdown hr-interview-button">
+                                                                <button class="btn btn-secondary dropdown-toggle py-1 text-primary bg-body my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                   Cleared
                                                                 </button>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -374,15 +423,22 @@
                                                                     <a class="dropdown-item" href="#">Null</a>
                                                                     <a class="dropdown-item" href="#">Not Attened</a>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
+                                                            <select name="hr-interview-status" style="display: none;" id="hr-interview-status" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0">
+                                                                <option value="Cleared">Cleared</option>
+                                                                <option value="Not Cleared">Not Cleared </option>
+                                                                <option value="Null">Null</option>
+                                                                <option value="Not Attened">Not Attened</option>
+                                                              </select>
+                                                            <div id="hr-interview-status-text" class="px-1 py-2 fw-bold">Test</div>
                                                         </div>
                                                     </div>
                                                     <div class="row align-items-center border-top-custom1 m-0">
-                                                        <div class="col-6 p-0 fw-bold text-light fs-6">
+                                                        <div class="col-6 p-0 fw-bold fs-6">
                                                             3rd Round
                                                         </div>
                                                         <div class="col-6 border-left-custom1">
-                                                            <div class="dropdown hr-interview-button">
+                                                            <!-- <div class="dropdown hr-interview-button">
                                                                 <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                   Cleared
                                                                 </button>
@@ -391,22 +447,34 @@
                                                                     <a class="dropdown-item" href="#">Null</a>
                                                                     <a class="dropdown-item" href="#">Not Attened</a>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
+                                                            <select name="hr-interview-status" style="display: none;" id="hr-interview-status" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0">
+                                                                <option value="Cleared">Cleared</option>
+                                                                <option value="Not Cleared">Not Cleared </option>
+                                                                <option value="Null">Null</option>
+                                                                <option value="Not Attened">Not Attened</option>
+                                                              </select>
+                                                            <div id="hr-interview-status-text" class="px-1 py-2 fw-bold">Test</div>
                                                         </div>
                                                     </div>
                                                     <div class="row align-items-center border-top-custom1 m-0">
-                                                        <div class="col-6 p-0 fw-bold text-light fs-6">
+                                                        <div class="col-6 p-0 fw-bold fs-6">
                                                             Offered accepted
                                                         </div>
                                                         <div class="col-6 border-left-custom1">
-                                                            <div class="dropdown hr-interview-button">
+                                                            <!-- <div class="dropdown hr-interview-button">
                                                                 <button class="btn btn-secondary dropdown-toggle px-1 py-0 text-primary bg-body my-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                   Yes
                                                                 </button>
                                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                                     <a class="dropdown-item" href="#">No</a>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
+                                                            <select name="hr-interview-status" style="display: none;" id="hr-interview-status" class="px-1 py-1 text-primary bg-body my-2 rounded-3 border-0">
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                            </select>
+                                                            <div id="hr-interview-status-text" class="px-1 py-2 fw-bold">Test</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -426,13 +494,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <!-- <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Dizitalpods 2022</span>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
             <!-- End of Footer -->
 
         </div>
@@ -474,6 +542,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Custom scripts for all pages-->
     <script src="../js/custom.js"></script>
+
 
 </body>
 
